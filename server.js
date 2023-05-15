@@ -14,15 +14,12 @@ const cookieParser = require('cookie-parser');
 // online
 const CONNECTION_STRING = process.env.MONGODB_URL;
 
-// mongoose.connect(CONNECTION_STRING, {
-// 	useNewUrlParser: true,
-// 	useUnifiedTopology: true
-// });
-// mongoose.set('strictQuery', false);
-mongoose.set("strictQuery", false);
-mongoose.connect(process.env.MONGO_URL, () => {
-  console.log("Connected to MongoDB");
+mongoose.connect(CONNECTION_STRING, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true
 });
+mongoose.set('strictQuery', false);
+
 mongoose.connection.on('open', () => console.log('Mongo Running'));
 mongoose.connection.on('error', (err) => console.log(err));
 
