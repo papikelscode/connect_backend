@@ -18,7 +18,7 @@ mongoose.connect(CONNECTION_STRING, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
-mongoose.set('strictQuery', false);
+mongoose.set('strictQuery', true);
 
 mongoose.connection.on('open', () => console.log('Mongo Running'));
 mongoose.connection.on('error', (err) => console.log(err));
