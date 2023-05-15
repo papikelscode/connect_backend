@@ -12,7 +12,7 @@ const cookieParser = require('cookie-parser');
 // offline
 // const CONNECTION_STRING = "mongodb://localhost:27017/africequip";
 // online
-const CONNECTION_STRING = "mongodb+srv://meedoMontana:MontanaMongo01@myafricequipdb.rsxoiac.mongodb.net/africequip";
+const CONNECTION_STRING = process.env.MONGODB_URL;
 
 mongoose.connect(CONNECTION_STRING, {
 	useNewUrlParser: true,

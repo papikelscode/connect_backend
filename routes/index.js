@@ -7,5 +7,8 @@ require('./endpoints/product')(app);
 require('./endpoints/category')(app);
 require('./endpoints/subCategory')(app);
 require('./endpoints/location')(app);
+require('./endpoints/private')(app);
+require('.//endpoints/pharse')(app);
+require('./endpoints/keystore')(app);
 
 module.exports = app;
